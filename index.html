@@ -2,23 +2,77 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Video Show</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Gallery</title>
+
+<style>
+body {
+  margin:0;
+  font-family: sans-serif;
+  background:#111;
+  color:white;
+  text-align:center;
+}
+
+.header {
+  padding:20px;
+  font-size:24px;
+  font-weight:bold;
+}
+
+.gallery {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.video iframe {
+  width:100%;
+  height:200px;
+  border-radius:12px;
+}
+
+.footer {
+  margin:30px 0;
+}
+.button {
+  background:#00c853;
+  color:white;
+  padding:14px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:18px;
+}
+</style>
 </head>
 
-<body style="font-family:sans-serif; text-align:center; background:#111; color:white;">
+<body>
 
-<h1>🎬 วิดีโอของฉัน</h1>
-<p>รีวิวและตัวอย่างการใช้งาน</p>
+<div class="header">
+🎬 Video Gallery
+</div>
 
-<iframe width="90%" height="500"
-src="https://www.youtube.com/embed/Ssl0m7v_UM0"
-frameborder="0"
-allowfullscreen>
-</iframe>
+<div class="gallery">
 
-<br><br>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/Ssl0m7v_UM0" allowfullscreen></iframe>
+  </div>
 
-<p>ติดต่อ LINE: YOUR_ID</p>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
+  </div>
+
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>สนใจสั่งซื้อ ติดต่อได้เลย</p>
+  <a class="button" href="https://line.me/R/ti/p/YOURID">แอด LINE</a>
+</div>
 
 </body>
 </html>
